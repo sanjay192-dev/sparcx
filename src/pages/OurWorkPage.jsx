@@ -2,18 +2,12 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
 
-// Placeholder images for projects
-import project1Image from '../assets/images/projects/project-1.jpg';
-import project2Image from '../assets/images/projects/project-2.jpg';
-import project3Image from '../assets/images/projects/project-3.jpg';
-import project4Image from '../assets/images/projects/project-4.jpg';
-
 const sampleProjects = [
   {
     id: 1,
     title: 'E-commerce Platform Redesign',
     description: 'A comprehensive redesign of a robust e-commerce platform, focusing on user experience and conversion optimization.',
-    image: project1Image,
+    image: '', // Cloudinary URL will go here later
     technologies: ['React.js', 'Node.js', 'MongoDB', 'Stripe'],
     link: '#',
   },
@@ -21,7 +15,7 @@ const sampleProjects = [
     id: 2,
     title: 'SaaS Analytics Dashboard',
     description: 'Developed an intuitive SaaS analytics dashboard for real-time data visualization and reporting.',
-    image: project2Image,
+    image: '',
     technologies: ['Next.js', 'Express', 'PostgreSQL', 'Chart.js'],
     link: '#',
   },
@@ -29,7 +23,7 @@ const sampleProjects = [
     id: 3,
     title: 'Real-time Chat Application',
     description: 'Built a high-performance real-time chat application with secure communication and rich media support.',
-    image: project3Image,
+    image: '',
     technologies: ['React.js', 'Socket.IO', 'Node.js', 'Redis'],
     link: '#',
   },
@@ -37,7 +31,7 @@ const sampleProjects = [
     id: 4,
     title: 'Custom CRM System',
     description: 'Designed and implemented a custom CRM system to streamline client management and sales processes.',
-    image: project4Image,
+    image: '',
     technologies: ['Django', 'React.js', 'PostgreSQL'],
     link: '#',
   },
@@ -58,14 +52,14 @@ function OurWorkPage() {
         <motion.h1
           variants={textVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isInView ? 'visible' : 'hidden'}
         >
           Our Work & Projects
         </motion.h1>
         <motion.p
           variants={textVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isInView ? 'visible' : 'hidden'}
           transition={{ ...textVariants.visible.transition, delay: 0.2 }}
         >
           Explore some of our recent projects that showcase our expertise and dedication to crafting high-quality digital solutions.
@@ -73,7 +67,7 @@ function OurWorkPage() {
         <motion.div
           className="project-grid"
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isInView ? 'visible' : 'hidden'}
           variants={{
             visible: { transition: { staggerChildren: 0.1 } },
           }}
