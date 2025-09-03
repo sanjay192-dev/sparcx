@@ -1,0 +1,80 @@
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+
+import reactIcon from '../assets/images/tech-icons/react-icon.svg';
+import nodejsIcon from '../assets/images/tech-icons/nodejs-icon.svg';
+import expressIcon from '../assets/images/tech-icons/express-icon.svg';
+import mongodbIcon from '../assets/images/tech-icons/mongodb-icon.svg';
+import djangoIcon from '../assets/images/tech-icons/django-icon.svg';
+import cloudinaryIcon from '../assets/images/tech-icons/cloudinary-icon.svg';
+import nextjsIcon from '../assets/images/tech-icons/nextjs-icon.svg';
+import postgresqlIcon from '../assets/images/tech-icons/postgresql-icon.svg';
+import fastapiIcon from '../assets/images/tech-icons/fastapi-icon.svg';
+
+const technologies = [
+  { name: 'React.js', icon: reactIcon },
+  { name: 'Node.js', icon: nodejsIcon },
+  { name: 'Express', icon: expressIcon },
+  { name: 'MongoDB', icon: mongodbIcon },
+  { name: 'Django', icon: djangoIcon },
+  { name: 'Cloudinary', icon: cloudinaryIcon },
+  { name: 'Next.js', icon: nextjsIcon },
+  { name: 'PostgreSQL', icon: postgresqlIcon },
+  { name: 'FastAPI', icon: fastapiIcon },
+];
+
+const TechStackSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+  };
+
+  return (
+    <section className="tech-stack-section" ref={ref}>
+      <div className="container">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          Our Tech Stack
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          We work extensively with cutting-edge technologies like the MERN stack and Django to build fast, scalable, and secure platforms. Our cloud media processing is powered by Cloudinary, and we ensure every deployment is production-grade.
+        </motion.p>
+        <motion.div
+          className="tech-icons"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {technologies.map((tech) => (
+            <motion.div className="tech-item" key={tech.name} variants={itemVariants}>
+              <img src={tech.icon} alt={tech.name} className="tech-icon" />
+              <span>{tech.name}</span>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default TechStackSection;
