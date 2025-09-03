@@ -1,26 +1,16 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-import reactIcon from '../assets/images/tech-icons/react-icon.svg';
-import nodejsIcon from '../assets/images/tech-icons/nodejs-icon.svg';
-import expressIcon from '../assets/images/tech-icons/express-icon.svg';
-import mongodbIcon from '../assets/images/tech-icons/mongodb-icon.svg';
-import djangoIcon from '../assets/images/tech-icons/django-icon.svg';
-import cloudinaryIcon from '../assets/images/tech-icons/cloudinary-icon.svg';
-import nextjsIcon from '../assets/images/tech-icons/nextjs-icon.svg';
-import postgresqlIcon from '../assets/images/tech-icons/postgresql-icon.svg';
-import fastapiIcon from '../assets/images/tech-icons/fastapi-icon.svg';
-
 const technologies = [
-  { name: 'React.js', icon: reactIcon },
-  { name: 'Node.js', icon: nodejsIcon },
-  { name: 'Express', icon: expressIcon },
-  { name: 'MongoDB', icon: mongodbIcon },
-  { name: 'Django', icon: djangoIcon },
-  { name: 'Cloudinary', icon: cloudinaryIcon },
-  { name: 'Next.js', icon: nextjsIcon },
-  { name: 'PostgreSQL', icon: postgresqlIcon },
-  { name: 'FastAPI', icon: fastapiIcon },
+  { name: 'React.js', icon: '' },       // Cloudinary URL later
+  { name: 'Node.js', icon: '' },
+  { name: 'Express', icon: '' },
+  { name: 'MongoDB', icon: '' },
+  { name: 'Django', icon: '' },
+  { name: 'Cloudinary', icon: '' },
+  { name: 'Next.js', icon: '' },
+  { name: 'PostgreSQL', icon: '' },
+  { name: 'FastAPI', icon: '' },
 ];
 
 const TechStackSection = () => {
@@ -63,7 +53,7 @@ const TechStackSection = () => {
           className="tech-icons"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isInView ? 'visible' : 'hidden'}
         >
           {technologies.map((tech) => (
             <motion.div className="tech-item" key={tech.name} variants={itemVariants}>
