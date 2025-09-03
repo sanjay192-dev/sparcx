@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import heroIllustration from '../assets/images/hero-illustration.svg'; // Import the SVG
 
 const HeroSection = () => {
   return (
@@ -38,7 +37,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8, type: 'spring', stiffness: 100 }}
         >
-          <img src={heroIllustration} alt="Team working on web solutions" />
+          <img src="" alt="Team working on web solutions" />
         </motion.div>
       </div>
     </section>
