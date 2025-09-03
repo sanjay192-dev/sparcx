@@ -2,19 +2,13 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import TeamMemberCard from '../components/TeamMemberCard';
 
-// Placeholder images for team members
-import johnDoeImage from '../assets/images/team-members/john-doe.jpg';
-import janeSmithImage from '../assets/images/team-members/jane-smith.jpg';
-import peterJonesImage from '../assets/images/team-members/peter-jones.jpg';
-import aliceBrownImage from '../assets/images/team-members/alice-brown.jpg';
-
 const teamMembers = [
   {
     id: 1,
     name: 'John Doe',
     role: 'Lead Full-stack Developer',
     description: 'John is an expert in React and Node.js with a passion for building scalable web applications.',
-    image: johnDoeImage,
+    image: '', // Cloudinary URL will go here later
     linkedin: '#',
     portfolio: '#',
   },
@@ -23,7 +17,7 @@ const teamMembers = [
     name: 'Jane Smith',
     role: 'UI/UX Designer',
     description: 'Jane focuses on creating intuitive and visually appealing user interfaces that enhance user experience.',
-    image: janeSmithImage,
+    image: '',
     linkedin: '#',
     portfolio: '#',
   },
@@ -32,7 +26,7 @@ const teamMembers = [
     name: 'Peter Jones',
     role: 'Backend Engineer',
     description: 'Peter specializes in designing and implementing robust and secure backend systems using Django and FastAPI.',
-    image: peterJonesImage,
+    image: '',
     linkedin: '#',
     portfolio: '#',
   },
@@ -41,7 +35,7 @@ const teamMembers = [
     name: 'Alice Brown',
     role: 'DevOps Specialist',
     description: 'Alice ensures seamless deployment and infrastructure management, focusing on efficiency and automation.',
-    image: aliceBrownImage,
+    image: '',
     linkedin: '#',
     portfolio: '#',
   },
@@ -62,14 +56,14 @@ function TeamPage() {
         <motion.h1
           variants={textVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isInView ? 'visible' : 'hidden'}
         >
           Our Talented Team
         </motion.h1>
         <motion.p
           variants={textVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isInView ? 'visible' : 'hidden'}
           transition={{ ...textVariants.visible.transition, delay: 0.2 }}
         >
           Meet the dedicated professionals behind Sparcx Solutions who are committed to delivering excellence.
@@ -77,7 +71,7 @@ function TeamPage() {
         <motion.div
           className="team-grid"
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isInView ? 'visible' : 'hidden'}
           variants={{
             visible: { transition: { staggerChildren: 0.1 } },
           }}
