@@ -1,0 +1,16 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="50" y="50" width="300" height="200" rx="15" fill="#E0F2F7"/>
+<rect x="70" y="70" width="260" height="10" rx="3" fill="#B3E5FC"/>
+<rect x="70" y="90" width="100" height="10" rx="3" fill="#B3E5FC"/>
+<rect x="70" y="110" width="180" height="10" rx="3" fill="#B3E5FC"/>
+<circle cx="300" cy="100" r="20" fill="#007bff"/>
+<path d="M290 100 L300 110 L310 90" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="80" y="150" width="80" height="80" rx="10" fill="#BBDEFB"/>
+<rect x="180" y="150" width="80" height="80" rx="10" fill="#90CAF9"/>
+<rect x="280" y="150" width="80" height="80" rx="10" fill="#64B5F6"/>
+<text x="120" y="195" font-family="Arial" font-size="16" fill="#000000" text-anchor="middle">Code</text>
+<text x="220" y="195" font-family="Arial" font-size="16" fill="#000000" text-anchor="middle">Design</text>
+<text x="320" y="195" font-family="Arial" font-size="16" fill="#000000" text-anchor="middle">Deploy</text>
+<path d="M120 150 L120 130 C120 120 130 120 130 120 L180 120 C190 120 190 130 190 130 L190 150" stroke="#007bff" stroke-width="2" stroke-dasharray="5,5"/>
+<path d="M220 150 L220 130 C220 120 230 120 230 120 L280 120 C290 120 290 130 290 130 L290 150" stroke="#007bff" stroke-width="2" stroke-dasharray="5,5"/>
+</svg>
